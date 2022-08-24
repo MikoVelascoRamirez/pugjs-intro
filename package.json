@@ -1,5 +1,16 @@
 {
   "dependencies": {
     "pug": "^3.0.2"
-  }
+  },
+  "name": "4.pug_js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
