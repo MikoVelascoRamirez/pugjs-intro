@@ -65,3 +65,15 @@ html
         - const attributes = {};
         - attributes.class = 'baz';
         div#foo(data-bar="foo")&attributes(attributes)
+
+        // For/Each Loop
+        each n, i in [50,2,3,4,5]
+            p= "Number " + n + " is at the index " + (i+1)
+
+        - const fruit = { name: "Apple", color: "Red", price: 24.80}
+        - const anotherArray = [];
+
+            for value, key in anotherArray
+                p= `The ${key} of this fruit is ${value}`
+            else 
+                strong There is no props or content to iterate!
