@@ -17,3 +17,50 @@ html
         // - Pug will render this type of selector like a div (default).
         .display-box
         #myOnlyDiv
+
+        // - Attributes
+        input(type="password" name="inpPass")
+        
+        - const isAuthenticated = true ? "Verificado" : "No verificado"
+
+        input(
+            type='checkbox'
+            name='agreement'
+            checked
+        )
+
+        input(type="text" name="inpText" data-js=`${ 5 > 2 ? "OK" : "NOT OK"}`)
+
+        //Quoted attributes
+        div(class='div-class' '(click)'='play()')
+        
+        p= isAuthenticated
+            span= "Text that is <<p>escaped</p>>!"
+        
+        //Unescaped Buffered Code
+        p!= 'This code is <strong>not</strong> escaped!'
+
+        //Attribute Interpolation
+
+        - const url = 'pug-test.html';
+        a(href=`/${url}`)
+
+        //Style Attributes
+        a(style={color: 'red', background: 'green'})
+
+        //Class Attributes
+        - const classes = ['foo', 'bar', 'baz'];
+
+        a(class=classes)
+        p.bang(class=classes class='bing')
+
+        - const currentUrl = '/about';
+
+        // Class Attributes
+        p(class={active: curreuntUrl === '/'} href='/') Home
+        p(class={active: currentUrl === '/about'} href='/about') About
+
+        // &attributes
+        - const attributes = {};
+        - attributes.class = 'baz';
+        div#foo(data-bar="foo")&attributes(attributes)

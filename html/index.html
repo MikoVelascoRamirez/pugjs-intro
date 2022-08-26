@@ -18,5 +18,26 @@
     <!-- - Pug will render this type of selector like a div (default).-->
     <div class="display-box"></div>
     <div id="myOnlyDiv"></div>
+    <!-- - Attributes-->
+    <input type="password" name="inpPass">
+    <input type="checkbox" name="agreement" checked>
+    <input type="text" name="inpText" data-js="OK">
+    <!--Quoted attributes-->
+    <div class="div-class" (click)="play()"></div>
+    <p>Verificado<span>Text that is &lt;&lt;p&gt;escaped&lt;/p&gt;&gt;!</span></p>
+    <!--Unescaped Buffered Code-->
+    <p>This code is <strong>not</strong> escaped!</p>
+    <!--Attribute Interpolation-->
+    <a href="/pug-test.html"></a>
+    <!--Style Attributes-->
+    <a style="color:red;background:green;"></a>
+    <!--Class Attributes-->
+    <a class="foo bar baz"></a>
+    <p class="bang foo bar baz bing"></p>
+    <!-- Class Attributes-->
+    <p href="/">Home</p>
+    <p class="active" href="/about">About</p>
+    <!-- &attributes-->
+    <div class="baz" id="foo" data-bar="foo"></div>
   </body>
 </html>
