@@ -93,3 +93,16 @@ html
         
         else
             a(href="/login") Log in
+
+        // Case statement
+        - let orderStatus = 'Completed';
+
+        case orderStatus
+            when 'Pending'
+                p Your order has been placed and will sent shortly.
+            
+            when 'In_tramit'
+                p Your order is processing...
+            
+            when 'Completed'
+                p Your order has been delivered.
