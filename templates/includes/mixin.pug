@@ -1,0 +1,8 @@
+mixin comment(commentData)
+    .comment
+        if commentData.postedByAdmin
+            em (Posted by Admin)
+
+        .date= commentData.date
+        .author= commentData.author
+        .text= commentData.text
