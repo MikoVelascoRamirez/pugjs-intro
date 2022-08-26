@@ -77,3 +77,19 @@ html
                 p= `The ${key} of this fruit is ${value}`
             else 
                 strong There is no props or content to iterate!
+        
+        // Conditionals
+        - const user = { name: "Juliet", isLogged: true, lastLogin: 11}
+
+        if user.isLogged
+            p
+                | Welcome back,
+                strong #{user.name}
+
+        else if user.lastLogin < 10
+            p Your last login was #{ user.lastLogin } ago.
+            p
+                a(href="/login") Log in Again
+        
+        else
+            a(href="/login") Log in
