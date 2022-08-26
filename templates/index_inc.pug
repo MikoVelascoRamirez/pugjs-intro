@@ -1,3 +1,13 @@
+// -Mixins
+mixin list
+    ul#foo
+        li foo
+        li bar
+        li baz
+
+mixin pet(name)
+    li.pet= name
+
 doctype html
 
 html
@@ -8,3 +18,40 @@ html
         p Welcome to my super lame site.
 
         include includes/foot.pug
+
+    // -Use
+    +list
+    +list
+
+    +pet('cat')
+    +pet('dog')
+    +pet('pig')
+
+    // -Mixin blocks
+    
+    mixin article(title)
+        .article
+            .article-wrapper
+                h1= title
+                if block
+                    block
+                else
+                    p No content provided
+    
+    +article('Hello world')
+    +article('This element has a block content')
+        p This is my
+        p Amazing article
+
+    // -Mixin attributes
+    mixin link(href, name)
+        a(class!=attributes.class href=href)= name
+    
+    +link('/foo', 'foo')(class="btn")
+
+    // -IZY way
+
+    mixin anotherLink(href, name)
+        a(href=href)&attributes(attributes)= name
+    
+    +anotherLink('/fooo', 'fooo')(class="btn")
