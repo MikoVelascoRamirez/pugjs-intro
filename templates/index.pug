@@ -2,6 +2,7 @@ doctype html
 
 html
     head
+        link(rel="stylesheet" href="../css/style.css")
     body
         h1#pageTitle Welcome to Pug!
         p.big-paragraph.
@@ -43,15 +44,15 @@ html
         //Attribute Interpolation
 
         - const url = 'pug-test.html';
-        a(href=`/${url}`)
+        a(href=`/${url}`) Root
 
         //Style Attributes
-        a(style={color: 'red', background: 'green'})
+        a(style={color: 'red', background: 'green'}) Style attribute
 
         //Class Attributes
         - const classes = ['foo', 'bar', 'baz'];
 
-        a(class=classes)
+        a(class=classes) Classes
         p.bang(class=classes class='bing')
 
         - const currentUrl = '/about';

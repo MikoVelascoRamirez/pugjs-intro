@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
-  <head></head>
+  <head>
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
   <body>
     <h1 id="pageTitle">Welcome to Pug!</h1>
     <p class="big-paragraph">
@@ -27,12 +29,9 @@
     <p>Verificado<span>Text that is &lt;&lt;p&gt;escaped&lt;/p&gt;&gt;!</span></p>
     <!--Unescaped Buffered Code-->
     <p>This code is <strong>not</strong> escaped!</p>
-    <!--Attribute Interpolation-->
-    <a href="/pug-test.html"></a>
-    <!--Style Attributes-->
-    <a style="color:red;background:green;"></a>
-    <!--Class Attributes-->
-    <a class="foo bar baz"></a>
+    <!--Attribute Interpolation--><a href="/pug-test.html">Root</a>
+    <!--Style Attributes--><a style="color:red;background:green;">Style attribute</a>
+    <!--Class Attributes--><a class="foo bar baz">Classes</a>
     <p class="bang foo bar baz bing"></p>
     <!-- Class Attributes-->
     <p href="/">Home</p>
